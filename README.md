@@ -307,7 +307,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Credits
 Author: `Alfredo Martins` | Nickname: `CodeTyper`
 
-![avatar](https://images.weserv.nl/?url=https://user-images.githubusercontent.com/34483729/163725648-9eed2057-4502-4af5-bcff-643925695e31.jpg?v=4&h=200&w=200&fit=cover&mask=circle&maxage=7d
+![avatar](https://images.weserv.nl/?url=https://user-images.githubusercontent.com/34483729/163725648-9eed2057-4502-4af5-bcff-643925695e31.jpg?v=4&h=75&w=75&fit=cover&mask=circle&maxage=7d
 )
 
 > _Learn by doing._
