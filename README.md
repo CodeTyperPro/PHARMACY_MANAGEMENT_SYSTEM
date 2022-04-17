@@ -101,8 +101,28 @@ Pharmacy Management System is blá blá blá
 |Order|Field|Type|
 |:--|:-----|:------|
 | 1 | name  | string |
-| 1 | name  | string |
-| 1 | name  | string |
+| 2 | username  | string |
+| 3 | password  | string |
+
+### Medicine
+
+|Order|Field|Type|
+|:--|:-----|:------|
+| 1 | name  | `string` |
+| 2 | supplier  | `string` |
+| 3 | price  | `double` |
+| 4 | quantity  | `integer` |
+
+### Invoice
+
+|Order|Field|Type|
+|:--|:-----|:------|
+| 1 | costumer_name  | `string` |
+| 2 | medicine_name  | `string` |
+| 3 | quantity  | `integer` |
+| 4 | total_price  | `double` |
+| 5 | date  | `string` |
+
 
 ---
 
