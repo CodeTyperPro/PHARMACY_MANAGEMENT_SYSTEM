@@ -1,114 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<users>
-      
-  
+<Users>
   <user>
-            
-    
-    <name>Alfredo</name>
-            
-    
-    <username>codetyper</username>
-            
-    
-    <password>[C@46fbb2c1</password>
-            
-    
+    <name>Alfredo Martins</name>
+    <username>codetyperpro</username>
+    <password>[e@5b35e0d2</password>
     <level>1</level>
-          
-  
   </user>
-      
-  
-  
   <user>
-                                
-    
-    
-    
-    
-    
-    
-    <name>Patrick</name>
-                                
-    
-    
-    
-    
-    
-    
-    <username>patrick</username>
-                                
-    
-    
-    
-    
-    
-    
-    <password>[C@19e1023e</password>
-                                
-    
-    
-    
-    
-    
-    
-    <level>1</level>
-                              
-  
-  
-  
-  
-  
-  
-  </user>
-              
-
-
-
-  
-  
-  
-  <user>
-                
-    
-    
-    <name>Maimona</name>
-                
-    
-    
-    <username>maimona</username>
-                
-    
-    
-    <password>[C@1698c449</password>
-                
-    
-    
-    <level>1</level>
-              
-  
-  
-  </user>
-      
-
-  
-  <user>
-        
-    <name>Diana</name>
-        
-    <username>diana</username>
-        
-    <password>[C@2cdf8d8a</password>
-        
+    <name>Hayat Chouhib</name>
+    <username>hayat</username>
+    <password>[C@5b37e0d2</password>
     <level>2</level>
-      
   </user>
-  
   <user>
-    <name>Rafaela</name>
+    <name>Rafaela Veloso</name>
     <username>rafaela</username>
-    <password>[C@e6ea0c6</password>
+    <password>[T#5n4032</password>
     <level>3</level>
   </user>
-</users>
+</Users>
