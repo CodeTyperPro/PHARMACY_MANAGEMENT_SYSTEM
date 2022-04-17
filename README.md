@@ -148,7 +148,6 @@ Pharmacist admin
 | 4 | total_price  | `double` |
 | 5 | date  | `string` |
 
-
 ---
 
 ## List of forms

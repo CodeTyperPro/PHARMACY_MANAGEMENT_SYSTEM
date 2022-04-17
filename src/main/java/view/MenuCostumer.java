@@ -19,7 +19,7 @@ public abstract class MenuCostumer {
 
         System.out.println("\n\t\t::: LIST OF REPORT :::\n");
 
-        if(invoices != null){
+        if(invoices.size()>0){
 
             /*
              * leftJustifiedRows - If true, it will add "-" as a flag to format string to
@@ -31,7 +31,7 @@ public abstract class MenuCostumer {
              * Table to print in console in 2-dimensional array. Each sub-array is a row.
              */
             int n = invoices.size();
-            String [][] table = new String[n+1][7];
+            String [][] table = new String[n+1][6];
             table[0][0] = "Ord";
             table[0][1] = "Id";
             table[0][2] = "Medicine";

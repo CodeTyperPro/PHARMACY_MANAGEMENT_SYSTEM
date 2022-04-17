@@ -7,8 +7,8 @@ public class main {
     public static void main(String[] args) {
         Login.active_user = new User();
         ShowTitle();
-        //Login.ShowLogin();
-        Login.ShowMenuPharmacist();
+        Login.ShowLogin();
+        //Login.ShowMenuPharmacist();
         //Login.ShowMenuSupplier();
         //Login.ShowMenuCostumer();
     }

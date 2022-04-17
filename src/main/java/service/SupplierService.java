@@ -1,5 +1,6 @@
 package service;
 
+import model.Invoice;
 import model.Medicine;
 import model.User;
 
@@ -18,6 +19,12 @@ public class SupplierService implements SupplierServiceInterface{
 
     @Override
     public ArrayList<Medicine> listMedicineReport(User user) {
-        return null;
+        ArrayList<Medicine> list = new ArrayList<>();
+        for (Medicine medicine : new MedicineService().listMedicines()){
+            if(medicine.getSupplier().equals(user.getName())){
+                list.add(medicine);
+            }
+        }
+        return list;
     }
 }

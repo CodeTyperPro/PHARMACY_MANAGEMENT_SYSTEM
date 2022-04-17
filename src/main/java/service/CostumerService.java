@@ -20,7 +20,13 @@ public class CostumerService implements CostumerServiceInterface {
 
     @Override
     public ArrayList<Invoice> listInvoiceReport(User user) {
-        return null;
+        ArrayList<Invoice> list = new ArrayList<>();
+        for (Invoice invoice : new InvoiceService().listInvoice()){
+            if(invoice.getCostumerName().equals(user.getName())){
+                list.add(invoice);
+            }
+        }
+        return list;
     }
 
     @Override
