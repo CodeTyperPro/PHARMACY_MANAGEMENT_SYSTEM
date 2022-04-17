@@ -1,14 +1,35 @@
 # PHARMACY MANAGEMENT SYSTEM
 
-Pharmacy Management System is blá blá blá
+Developed using PHP scripting language, Pharmacy management system is an online application that uses MySQL as the database. In this project, invoices and receipts are generated using TCPDF. TCPDF is a PHP-based library for generating PDF documents without requiring external extensions. It includes complete support for UTF-8 Unicode, bi-directional algorithm, and right-to-left languages.
+
+Existing System:
+
+The existing system is paper-based involving high amount of paper work and manpower requirement. Even though computerized systems are used in some places, they are not web-based and are very insecure and improperly managed. So, the current pharmacy management procedure is very uneconomical and inflexible to meet user demands.
+
+Proposed System:
+
+The proposed system, being web-based, is very efficient and effective from the point of view of work productivity and time. It is less tedious to manage operations in a medical store or pharmacy with such a system. It has all the required modules and is developed with the aim of managing staffs, schedule, inventories, and relevant things in the medical store.
+
+With this system, the entire operations in medical store is fully automated. Unlike the traditional system where records were maintained manually, this system maintains records in a database. Typical example of these records include purchases, counter sales, recorder levels, staffs, suppliers, customers, monetary transactions, etc.
+
+Users of the system:
+
+Listed below are the main users of the system. They are required to register into the system to access records and details stored in the database. Only the head admin has the privilege or access over all records and users. The system access to other users in restricted as per their functions in the medical store.
+
+Head admin
+Cashier admin
+Manager admin
+Pharmacist admin
 
 ### Table Content
 1. [Workplace](#workplace)
 2. [How to use the project](#how-to-use-the-project)
 3. [Project Structure](#project-structure)
 4. [Main Classes](#main-classes)
-5. [License](#license)
-6. [Author Info](#author-info)
+5. [List of forms](#list-of-forms)
+6. [List of XML files](#list-of-xml-files)
+7. [License](#license)
+8. [Author Info](#author-info)
 
 ---
 
@@ -95,6 +116,9 @@ Pharmacy Management System is blá blá blá
   * test: Empty folder
 
 ## Main Classes
+- [User](#user)
+- [Medicine](#medicine)
+- [Invoice](#invoice)
 
 ### User
 
@@ -103,6 +127,7 @@ Pharmacy Management System is blá blá blá
 | 1 | name  | `string` |
 | 2 | username  | `string` |
 | 3 | password  | `string` |
+| 4 | acess_level  | `integer` |
 
 ### Medicine
 
@@ -126,6 +151,101 @@ Pharmacy Management System is blá blá blá
 
 ---
 
+## List of forms
+- [Login](#login)
+- [Main Menu Costumer](#main-menu-costumer)
+- [Main Menu Supplier](#main-menu-supplier)
+- [Main Menu Pharmacist](#main-menu-pharmacist)
+- [Menu Users](#menu-users)
+- [Menu Costumers](#menu-costumers)
+- [Menu Medicines](#menu-medicines)
+- [Menu Invoices](#menu-invoices)
+
+### Login
+
+### Main Menu Costumer
+
+### Main Menu Supplier
+
+### Main Menu Pharmacist
+
+### Menu Users
+
+### Menu Costumers
+
+### Menu Medicines
+
+### Menu Invoices
+
+---
+
+## List of XML files
+
+### Users
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Users>
+	<user>
+		<name>Alfredo Martins</name>
+		<username>codetyperpro</username>
+		<password>[e@5b35e0d2</password>
+		<level>1</level>
+	</user>
+	<user>
+		<name>Hayat Chouhib</name>
+		<username>hayat</username>
+		<password>[C@5b37e0d2</password>
+		<level>1</level>
+	</user>
+</Users>
+```
+
+### Invoice
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<invoices>
+  <invoice>
+    <id>1</id>
+    <costumerName>Teresa</costumerName>
+    <medicineName>Paracetamol</medicineName>
+    <quantity>4</quantity>
+    <totalPrice>180.0</totalPrice>
+    <date>2022-04-24</date>
+  </invoice>
+  <invoice>
+    <id>2</id>
+    <costumerName>John</costumerName>
+    <medicineName>Atorvastatin</medicineName>
+    <quantity>4</quantity>
+    <totalPrice>1834.0</totalPrice>
+    <date>2022-05-06</date>
+  </invoice>
+</invoices>
+```
+
+### Medicine
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<medicines>
+  <medicine>
+    <name>Atorvastatin</name>
+    <supplier>Rafaela</supplier>
+    <price>1500.0</price>
+    <quantity>20</quantity>
+  </medicine>
+  <medicine>
+    <name>Paracetamol</name>
+    <supplier>Rafaela</supplier>
+    <price>8400.0</price>
+    <quantity>30</quantity>
+  </medicine>
+</medicines>
+```
+
+---
 ## License
 MIT License
 
@@ -141,13 +261,13 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+_THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+SOFTWARE._
 ---
 
 ## Author Info

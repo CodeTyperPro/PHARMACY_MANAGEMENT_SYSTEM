@@ -1,101 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <medicines>
-                
-  
-  
-  
-  
-  
-  
-  
   <medicine>
-                                
-    
-    
-    
-    
-    
-    
-    <name>123</name>
-                                
-    
-    
-    
-    
-    
-    
-    <supplier>123</supplier>
-                                
-    
-    
-    
-    
-    
-    
-    <price>123</price>
-                                
-    
-    
-    
-    
-    
-    
-    <quantity>123</quantity>
-                              
-  
-  
-  
-  
-  
-  
-  </medicine>
-              
-  
-  
-  
-  
-  
-  
-  <medicine>
-                            
-    
-    
-    
-    
-    
-    <name>ER</name>
-                            
-    
-    
-    
-    
-    
+    <name>Atorvastatin</name>
     <supplier>Rafaela</supplier>
-                            
-    
-    
-    
-    
-    
-    <price>45</price>
-                            
-    
-    
-    
-    
-    
-    <quantity>12</quantity>
-                          
-  
-  
-  
-  
-  
+    <price>1500.0</price>
+    <quantity>20</quantity>
   </medicine>
-            
-
-
-
-
-
+  <medicine>
+    <name>Paracetamol</name>
+    <supplier>Rafaela</supplier>
+    <price>8400.0</price>
+    <quantity>30</quantity>
+  </medicine>
 </medicines>
