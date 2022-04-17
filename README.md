@@ -156,25 +156,48 @@ Pharmacist admin
 - [Main Menu Supplier](#main-menu-supplier)
 - [Main Menu Pharmacist](#main-menu-pharmacist)
 - [Menu Users](#menu-users)
-- [Menu Costumers](#menu-costumers)
 - [Menu Medicines](#menu-medicines)
 - [Menu Invoices](#menu-invoices)
+- [Supplier Report](#supplier-report)
+- [costumer Report](#costumer-report)
 
 ### Login
 
+![login](https://user-images.githubusercontent.com/34483729/163722628-6623a0d1-ff29-4084-898e-bbdeb33f5dc6.png)
+
+
 ### Main Menu Costumer
+
+![main_menu_costumer](https://user-images.githubusercontent.com/34483729/163722637-83af0334-a525-4f6f-a682-113222c74f0d.png)
 
 ### Main Menu Supplier
 
+![main_menu_supplier](https://user-images.githubusercontent.com/34483729/163722656-d7a7f793-2604-4ce1-b5ff-04d77986e750.png)
+
 ### Main Menu Pharmacist
+
+![main_menu_pharmacist](https://user-images.githubusercontent.com/34483729/163722649-f9784e1b-f8d4-43d6-b638-94f088413324.png)
 
 ### Menu Users
 
-### Menu Costumers
+![menu_user](https://user-images.githubusercontent.com/34483729/163722667-286e5a75-3f38-4b12-913d-9e88765f2109.png)
 
 ### Menu Medicines
 
+![menu_medicine](https://user-images.githubusercontent.com/34483729/163722683-50b55263-d945-419b-9e32-9ebedd567070.png)
+
+
 ### Menu Invoices
+
+![menu_invoice](https://user-images.githubusercontent.com/34483729/163722686-7d8983d1-03e7-4e56-bdbd-1babdb53d648.png)
+
+### Supplier Report
+
+![supplier_report](https://user-images.githubusercontent.com/34483729/163722729-4d6fa5a8-6fce-49a7-bb66-0885b58c53df.png)
+
+### Costumer Report
+
+![costumer_report](https://user-images.githubusercontent.com/34483729/163722735-5f262fbf-96b4-46be-93f8-81e0d47d06a2.png)
 
 ---
 
