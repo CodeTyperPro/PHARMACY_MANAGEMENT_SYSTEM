@@ -69,10 +69,10 @@ Pharmacist admin
 ## How to use the project
 
 Run the `main()` method on `main.class` pressing: Shift + F10.
+
 ![image](https://user-images.githubusercontent.com/34483729/163723638-9d12f94f-f3e1-4a93-b6e5-c969def15ec0.png)
 
 ---
-
 ## Project Structure
 * pom.xml
 * README.md
