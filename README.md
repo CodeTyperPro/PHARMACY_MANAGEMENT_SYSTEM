@@ -45,10 +45,52 @@ Pharmacy Management System is blá blá blá
 
 ---
 ## How to use the project
-Information here
+
 
 ## Project Structure
-Information here.
+* pom.xml
+* README.md
+* src
+  * main
+    * java: source-code of the application
+      * controller
+        - LoginController.class
+        - UserController.class
+      * model
+        - Costumer.class
+        - Invoice.class
+        - Pharmacist.class
+        - Supplier.class
+        - User.class
+      * service
+        - CostumerService.class
+        - CostumerServiceInterface.class
+        - InvoiceService.class
+        - InvoiceServiceInterface.class
+        - MedicineService.class
+        - MedicineServiceInterface.class
+        - SupplierService.class
+        - SupplierServiceInterface.class
+        - UserService.class
+        - UserServiceInterface.class
+        - XmlReaderService.class
+        - XmlReaderServiceInterface.class
+        - XmlWriterService.class
+        - XmlWriterServiceInterface.class
+      * view
+        - Login.class
+        - MenuCostumer.class
+        - MenuInvoice.class
+        - MenuMedicine.class
+        - MenuPharma.class
+        - MenuSupplier.class
+        - MenuUser.class
+      - main.class
+    * resources: xml files of the application
+      - invoices.xml
+      - medicines.xml
+      - users.xml
+  * test: Empty folder
 
 ## License
 MIT License
@@ -77,4 +119,4 @@ SOFTWARE.
 ## Author Info
 Information here.
 
-[Back to the top](#Table Content)
+[Back to the top](#table-content)
