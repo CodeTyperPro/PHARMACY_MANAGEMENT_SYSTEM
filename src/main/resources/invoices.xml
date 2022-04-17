@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<invoices>
+  <invoice>
+    <id>567</id>
+    <costumerName>Diana</costumerName>
+    <medicineName>ER</medicineName>
+    <quantity>4</quantity>
+    <totalPrice>180.0</totalPrice>
+    <date>6</date>
+  </invoice>
+
+</invoices>

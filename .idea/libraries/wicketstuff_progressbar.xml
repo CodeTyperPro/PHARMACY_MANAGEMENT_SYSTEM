@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="wicketstuff.progressbar" type="repository">
+    <properties maven-id="org.wicketstuff:progressbar:1.4.14" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wicketstuff/progressbar/1.4.14/progressbar-1.4.14.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/wicket/wicket/1.4.14/wicket-1.4.14.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

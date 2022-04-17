@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PMI_projectwork:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PMI_projectwork_jar</output-path>
+    <root id="archive" name="PMI_projectwork.jar">
+      <element id="module-output" name="PHARMACY_MANAGEMENT_SYSTEM" />
+    </root>
+  </artifact>
+</component>
