@@ -309,11 +309,12 @@ SOFTWARE._
 ---
 
 ## Credits
-Author: Alfredo Martins
-Nickname: `CodeTyper`
+_Author: `Alfredo Martins`_ | Nickname: `CodeTyper`
 
-Facebook: https://www.facebook.com/alfredomartins.alfredo
-Twitter: https://twitter.com/AlfredoMartins0
-GitHub: https://github.com/CodeTyperPro/
+> _Learn by doing._
+
+- Facebook: `https://www.facebook.com/alfredomartins.alfredo`
+- Twitter: `https://twitter.com/AlfredoMartins0`
+- GitHub: `https://github.com/CodeTyperPro`
 
 [Back to the top](#table-content)
