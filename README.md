@@ -308,7 +308,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE._
 ---
 
-## Author Info
-Information here.
+## Credits
+Author: Alfredo Martins
+Nickname: `CodeTyper`
+
+Facebook: https://www.facebook.com/alfredomartins.alfredo
+Twitter: https://twitter.com/AlfredoMartins0
+GitHub: https://github.com/CodeTyperPro/
 
 [Back to the top](#table-content)
