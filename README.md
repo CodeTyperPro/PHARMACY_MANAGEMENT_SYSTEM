@@ -3,11 +3,12 @@
 Pharmacy Management System is blá blá blá
 
 ### Table Content
-* [Workplace](#workplace)
-* [How to use the project](#how-to-use-the-project)
-* [Project Structure](#project-structure)
-* [License](#license)
-* [Author Info](#author-info)
+1. [Workplace](#workplace)
+2. [How to use the project](#how-to-use-the-project)
+3. [Project Structure](#project-structure)
+4. [Main Classes](#main-classes)
+5. [License](#license)
+6. [Author Info](#author-info)
 
 ---
 
@@ -46,6 +47,7 @@ Pharmacy Management System is blá blá blá
 ---
 ## How to use the project
 
+---
 
 ## Project Structure
 * pom.xml
@@ -92,6 +94,18 @@ Pharmacy Management System is blá blá blá
       - users.xml
   * test: Empty folder
 
+## Main Classes
+
+### User
+
+|Order|Field|Type|
+|:--|:-----|:------|
+| 1 | name  | string |
+| 1 | name  | string |
+| 1 | name  | string |
+
+---
+
 ## License
 MIT License
 
@@ -114,7 +128,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
+---
 
 ## Author Info
 Information here.
