@@ -67,10 +67,23 @@ Pharmacist admin
 
 ---
 ## How to use the project
-
 Run the `main()` method on `main.class` pressing: Shift + F10.
 
 ![image](https://user-images.githubusercontent.com/34483729/163723638-9d12f94f-f3e1-4a93-b6e5-c969def15ec0.png)
+
+See the ilustrations to have a nice overview to what to expect on [List of forms](#list-of-forms)
+User `username: codetyperpro` and `password:[e@5b35e0d2`.
+
+Based on acess level, you can be redirected to `3` possible screens after log in:
+- [Main Menu Costumer](#main-menu-costumer)
+- [Main Menu Supplier](#main-menu-supplier)
+- [Main Menu Pharmacist](#main-menu-pharmacist)
+
+What would you like to do?
+- [Order a new medicine](#order-a-new-medicine)
+- [Add new user](#add-new-user)
+- [List invoices](#list-invoices)
+- [More ...](#more)
 
 ---
 ## Project Structure
