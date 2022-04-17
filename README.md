@@ -1,25 +1,26 @@
 # PHARMACY MANAGEMENT SYSTEM
 
-Developed using PHP scripting language, Pharmacy management system is an online application that uses MySQL as the database. In this project, invoices and receipts are generated using TCPDF. TCPDF is a PHP-based library for generating PDF documents without requiring external extensions. It includes complete support for UTF-8 Unicode, bi-directional algorithm, and right-to-left languages.
+The pharmacy management system, also known as the pharmacy information system, is a system that stores data and enables functionality that organizes and maintains the medication use process within pharmacies.
 
-Existing System:
+Developed using `JAVA` programming language, Pharmacy management system is an offline application that uses `XML` as the database.
+
+### Existing System:
 
 The existing system is paper-based involving high amount of paper work and manpower requirement. Even though computerized systems are used in some places, they are not web-based and are very insecure and improperly managed. So, the current pharmacy management procedure is very uneconomical and inflexible to meet user demands.
 
-Proposed System:
+### Proposed System:
 
 The proposed system, being web-based, is very efficient and effective from the point of view of work productivity and time. It is less tedious to manage operations in a medical store or pharmacy with such a system. It has all the required modules and is developed with the aim of managing staffs, schedule, inventories, and relevant things in the medical store.
 
 With this system, the entire operations in medical store is fully automated. Unlike the traditional system where records were maintained manually, this system maintains records in a database. Typical example of these records include purchases, counter sales, recorder levels, staffs, suppliers, customers, monetary transactions, etc.
 
-Users of the system:
+### Users of the system:
 
-Listed below are the main users of the system. They are required to register into the system to access records and details stored in the database. Only the head admin has the privilege or access over all records and users. The system access to other users in restricted as per their functions in the medical store.
+Listed below are the main users of the system. They are required to register into the system to access records and details stored in the database. Only the Pharmacist has the privilege or access over all records and users. The system access to other users in restricted as per their functions in the medical store.
 
-Head admin
-Cashier admin
-Manager admin
-Pharmacist admin
+User Pharmacist
+User Costumer
+User Supplier
 
 ### Table Content
 1. [Workplace](#workplace)
