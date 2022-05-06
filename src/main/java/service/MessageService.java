@@ -107,4 +107,10 @@ public abstract class MessageService {
         String message = "\n\t\tNo item. It's empty!";
         System.out.println(message);
     }
+
+    public static void ShowInvalidNumber() {
+        ClearConsole();
+        String message = "\n\t\tInvalid input. Enter a valid input, please!";
+        System.out.println(message);
+    }
 }

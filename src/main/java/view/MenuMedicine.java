@@ -5,12 +5,15 @@ import model.User;
 import service.MedicineService;
 import service.MessageService;
 import service.UserService;
+import service.ValidateService;
 
 import java.util.*;
 import java.util.stream.Stream;
 
+
 public abstract class MenuMedicine {
     private static MedicineService service;
+    private static ValidateService validateService;
     public static void ShowAddMedicine() {
 
         service = new MedicineService();
@@ -24,11 +27,29 @@ public abstract class MenuMedicine {
         System.out.print("\t\tEnter the supplier: ");
         medicine.setSupplier(sc.next());
 
-        System.out.print("\t\tEnter the price: ");
-        medicine.setPrice(Double.parseDouble(sc.next()));
 
-        System.out.print("\t\tEnter the quantity: ");
-        medicine.setQuantity(Integer.parseInt(sc.next()));
+        String number = "";
+        do{
+            System.out.print("\t\tEnter the price: ");
+            number = sc.next();
+            if(!validateService.checkDoubleNumber(number)){
+                MessageService.ShowInvalidNumber();
+            }
+        } while(validateService.checkDoubleNumber(number));
+
+        medicine.setPrice(Double.parseDouble(number));
+
+
+        number = "";
+        do{
+            System.out.print("\t\tEnter the quantity: ");
+            number = sc.next();
+            if(!validateService.checkIntegerNumber(number)){
+                MessageService.ShowInvalidNumber();
+            }
+        } while(validateService.checkIntegerNumber(number));
+
+        medicine.setQuantity(Integer.parseInt(number));
 
         if(service.addMedicine(medicine)){
             MessageService.ShowSuccessfulMedicineCreateMessage();
@@ -73,11 +94,27 @@ public abstract class MenuMedicine {
         System.out.print("\t\tEnter the new supplier: ");
         medicine.setSupplier(sc.next());
 
-        System.out.print("\t\tEnter the new price: ");
-        medicine.setPrice(sc.nextDouble());
+        String number = "";
+        do{
+            System.out.print("\t\tEnter the new price: ");
+            number = sc.next();
+            if(!validateService.checkDoubleNumber(number)){
+                MessageService.ShowInvalidNumber();
+            }
+        } while(validateService.checkDoubleNumber(number));
 
-        System.out.print("\t\tEnter the new quantity: ");
-        medicine.setQuantity(sc.nextInt());
+        medicine.setPrice(Double.parseDouble(number));
+
+        number = "";
+        do{
+            System.out.print("\t\tEnter the new quantity: ");
+            number = sc.next();
+            if(!validateService.checkIntegerNumber(number)){
+                MessageService.ShowInvalidNumber();
+            }
+        } while(validateService.checkIntegerNumber(number));
+
+        medicine.setQuantity(Integer.parseInt(number));
 
         if(service.updateMedicine(name, medicine)){
             MessageService.ShowSuccessfulMedicineUpdatedMessage();
@@ -88,6 +125,10 @@ public abstract class MenuMedicine {
         MenuPharmacist.ShowMenuMedicine();
     }
 
+    /*
+     * @Author: RAVIK, NOVEMBER 5, 2019
+     * @url: https://itsallbinary.com/java-printing-to-console-in-table-format-simple-code-with-flexible-width-left-align-header-separator-line/
+     * */
     public static void ShowListMedicine() {
         service = new MedicineService();
         ArrayList<Medicine> medicines = service.listMedicines();

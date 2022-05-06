@@ -103,6 +103,10 @@ public abstract class MenuUser {
         MenuPharmacist.ShowMenuUser();
     }
 
+    /*
+     * @Author: RAVIK, NOVEMBER 5, 2019
+     * @url: https://itsallbinary.com/java-printing-to-console-in-table-format-simple-code-with-flexible-width-left-align-header-separator-line/
+     * */
     public static void ShowListUser() {
         service = new UserService();
         ArrayList<User> users = service.listUsers();

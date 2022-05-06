@@ -12,6 +12,10 @@ public abstract class MenuCostumer {
     private static CostumerService costumerService;
     private static UserService service;
 
+    /*
+    * @Author: RAVIK, NOVEMBER 5, 2019
+    * @url: https://itsallbinary.com/java-printing-to-console-in-table-format-simple-code-with-flexible-width-left-align-header-separator-line/
+    * */
     public static void ShowListOfReportCostumer() {
 
         costumerService = new CostumerService();
@@ -86,6 +90,10 @@ public abstract class MenuCostumer {
         }
     }
 
+    /*
+     * @Author: RAVIK, NOVEMBER 5, 2019
+     * @url: https://itsallbinary.com/java-printing-to-console-in-table-format-simple-code-with-flexible-width-left-align-header-separator-line/
+     * */
     public static void ShowPersonalInformationCostumer() {
         service = new UserService();
         ArrayList<User> users = service.getUserInformation(Login.active_user);
@@ -239,6 +247,10 @@ public abstract class MenuCostumer {
         MenuPharmacist.ShowMenuPharmacist();
     }
 
+    /*
+     * @Author: RAVIK, NOVEMBER 5, 2019
+     * @url: https://itsallbinary.com/java-printing-to-console-in-table-format-simple-code-with-flexible-width-left-align-header-separator-line/
+     * */
     public static void ShowListCostumer() {
         service = new UserService();
         ArrayList<User> users = service.listUsers();

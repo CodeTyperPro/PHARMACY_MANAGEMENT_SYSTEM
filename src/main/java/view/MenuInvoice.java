@@ -5,12 +5,14 @@ import model.Medicine;
 import service.InvoiceService;
 import service.MedicineService;
 import service.MessageService;
+import service.ValidateService;
 
 import java.util.*;
 import java.util.stream.Stream;
 
 public abstract class MenuInvoice {
     private static InvoiceService service;
+    private static ValidateService validateService;
 
     public static void ShowAddInvoice() {
         service = new InvoiceService();
@@ -24,8 +26,16 @@ public abstract class MenuInvoice {
         System.out.print("\t\tEnter the medicine: ");
         invoice.setMedicineName(sc.next());
 
-        System.out.print("\t\tEnter the quantity: ");
-        invoice.setQuantity(Integer.parseInt(sc.next()));
+        String number = "";
+        do{
+            System.out.print("\t\tEnter the quantity: ");
+            number = sc.next();
+            if(!validateService.checkIntegerNumber(number)){
+                MessageService.ShowInvalidNumber();
+            }
+        } while(validateService.checkIntegerNumber(number));
+
+        invoice.setQuantity(Integer.parseInt(number));
 
         invoice.setTotalPrice(service.getTotalPrice(invoice.getMedicineName(), invoice.getQuantity()));
         System.out.print("\t\tTotal Price = " + invoice.getTotalPrice() + "\n");
@@ -44,8 +54,18 @@ public abstract class MenuInvoice {
 
         System.out.print("\n\t\t::: REMOVE INVOICE :::\n");
         Scanner sc = new Scanner(System.in);
-        System.out.print("\n\t\tEnter the ID: ");
-        Integer id = Integer.parseInt(sc.next());
+
+
+        String number = "";
+        do{
+            System.out.print("\n\t\tEnter the ID: ");
+            number = sc.next();
+            if(!validateService.checkIntegerNumber(number)){
+                MessageService.ShowInvalidNumber();
+            }
+        } while(validateService.checkIntegerNumber(number));
+
+        Integer id = Integer.parseInt(number);
 
         if(service.deleteInvoice(id)){
             MessageService.ShowSuccessfulInvoiceDeletedMessage();
@@ -64,11 +84,29 @@ public abstract class MenuInvoice {
 
         Invoice invoice = new Invoice();
 
-        System.out.print("\t\tEnter the id: ");
-        Integer id = sc.nextInt();
 
-        System.out.print("\t\tEnter the new quantity: ");
-        invoice.setQuantity(sc.nextInt());
+        String number = "";
+        do{
+            System.out.print("\n\t\tEnter the ID: ");
+            number = sc.next();
+            if(!validateService.checkIntegerNumber(number)){
+                MessageService.ShowInvalidNumber();
+            }
+        } while(validateService.checkIntegerNumber(number));
+
+        Integer id = Integer.parseInt(number);
+
+        number = "";
+        do{
+            System.out.print("\t\tEnter the new quantity: ");
+            number = sc.next();
+            if(!validateService.checkIntegerNumber(number)){
+                MessageService.ShowInvalidNumber();
+            }
+        } while(validateService.checkIntegerNumber(number));
+
+        Integer quant = Integer.parseInt(number);
+        invoice.setQuantity(quant);
 
         if(service.updateInvoice(id, invoice)){
             MessageService.ShowSuccessfulMedicineUpdatedMessage();
@@ -79,6 +117,10 @@ public abstract class MenuInvoice {
         MenuPharmacist.ShowMenuMedicine();
     }
 
+    /*
+     * @Author: RAVIK, NOVEMBER 5, 2019
+     * @url: https://itsallbinary.com/java-printing-to-console-in-table-format-simple-code-with-flexible-width-left-align-header-separator-line/
+     * */
     public static void ShowListInvoice() {
         service = new InvoiceService();
         ArrayList<Invoice> invoices = service.listInvoice();
