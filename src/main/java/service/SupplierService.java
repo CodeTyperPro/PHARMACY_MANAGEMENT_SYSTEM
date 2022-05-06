@@ -1,23 +1,11 @@
 package service;
 
-import model.Invoice;
 import model.Medicine;
-import model.Supplier;
 import model.User;
 
 import java.util.ArrayList;
 
 public class SupplierService implements SupplierServiceInterface{
-    private ArrayList<Supplier>  suppliers = null;
-    @Override
-    public User personalInformation(String username) {
-        UserService userService = new UserService();
-        for (User user : userService.listUsers()){
-            if(user.getUsername().equals(username))
-                return user;
-        }
-        return null;
-    }
 
     @Override
     public ArrayList<Medicine> listMedicineReport(User user) {

@@ -94,37 +94,144 @@ What would you like to do?
     * java: source-code of the application
       * controller
         - LoginController.class
-        - UserController.class
+          - public Integer successfulLogin(User user): 
       * model
-        - Costumer.class
         - Invoice.class
-        - Pharmacist.class
-        - Supplier.class
+          - Invoice():
+          - Invoice(Integer id, String costumerName, String medicineName, Integer quantity, Double discount, Double totalPrice, String date):
+          - Integer getId():
+          - void setId(Integer id):
+          - String getCostumerName():
+          - void setCostumerName(String costumerName):
+          - String getMedicineName():
+          - void setMedicineName(String medicineName):
+          - Integer getQuantity():
+          - void setQuantity(Integer quantity):
+          - Double getTotalPrice():
+          - void setTotalPrice(Double totalPrice):
+          - String getDate():
+          - void setDate():
+        - Medicine.class
+          - Medicine()
+          - String getName():
+          - void setName(String name):
+          - String getSupplier():
+          - void setSupplier(String supplier):
+          - Double getPrice():
+          - void setPrice(Double price):
+          - Integer getQuantity():
+          - void setQuantity(Integer quantity):
+          - Medicine(String name, String supplier, Double price, Integer quantity):
         - User.class
+          - String getName():
+          - void setName(String name):
+          - String getUsername():
+          - void setUsername(String username):
+          - String getPassword():
+          - void setPassword(String password):
+          - Integer getLevel():
+          - setLevel(Integer level):
+          - public String toString():
       * service
         - CostumerService.class
+          - User personalInformation(String username):
+          - ArrayList<Invoice> listInvoiceReport(User user):
+          - Boolean existsCostumer(String username):
         - CostumerServiceInterface.class
-        - InvoiceService.class
+        - InvoiceService.class 
+          - Boolean addInvoice(Invoice invoice):
+          - Boolean deleteInvoice(Integer id):
+          - ArrayList<Invoice> listInvoice():
+          - Boolean updateInvoice(Integer id, Invoice invoice):
+          - Boolean existsInvoice(Integer id):
+          - Double getTotalPrice(String medicine, Integer quantity):
+          - String medicineInvoice(Integer id):
+          - ArrayList<Invoice> listInvoiceCostumer(String name):
+          - Integer getLastIdInvoice():
         - InvoiceServiceInterface.class
         - MedicineService.class
+          - Boolean addMedicine(Medicine medicine):
+          - Boolean deleteMedicine(String name):
+          - Boolean updateMedicine(String name, Medicine medicine):
+          - ArrayList<Medicine> listMedicines():
+          - Boolean existsMedicine(String name):
+          - Double priceMedicine(String name):
+          - ArrayList<Medicine> listMedicinesSupplier(String name):
         - MedicineServiceInterface.class
-        - SupplierService.class
+        - SupplierService.class 
+          - ArrayList<Medicine> listMedicineReport(User user):
         - SupplierServiceInterface.class
         - UserService.class
+          - Boolean addUser(User user);
+          - Boolean deleteUser(String username);
+          - Boolean updateUser(String username, User user);
+          - ArrayList<User> listUsers():
+          - Boolean existsUser(String username:
+          - String generatePassword(int len):
+          - ArrayList<User> getUserInformation(User user):
+          - User getUserInformation(String username):
         - UserServiceInterface.class
+        - ValidateService.class
+          - Boolean checkIntegerNumber(String number):
+          - Boolean checkDoubleNumber(String number):
+        - ValidateServiceInterface.class
         - XmlReaderService.class
+          - Boolean existsUserXML():
+          - Boolean existsMedicinesXML():
+          - Boolean existsInvoicesXML():
+          - Boolean createUserXML():
+          - Boolean createMedicinesXML():
+          - Boolean createInvoicesXML():
+          - ArrayList<User> readUsers():
+          - ArrayList<Medicine> readMedicines():
+          - ArrayList<Invoice> readInvoices():
         - XmlReaderServiceInterface.class
         - XmlWriterService.class
+          - Boolean addUserXML(User user):
+          - Boolean deleteUserXML(String username):
+          - Boolean updateUserXML(String username, User user):
+          - Boolean addMedicineXML(Medicine medicine):
+          - Boolean deleteMedicineXML(String username):
+          - Boolean updateMedicineXML(String username, Medicine medicine):
+          - Boolean addInvoiceXML(Invoice medicine):
+          - Boolean deleteInvoiceXML(Integer id):
+          - Boolean updateInvoiceXML(Integer id, Invoice invoice):
         - XmlWriterServiceInterface.class
       * view
         - Login.class
+          - void ShowLogin():
+          - void ShowMenuPharmacist():
+          - void ShowMenuCostumer():
+          - void ShowMenuSupplier():
         - MenuCostumer.class
+          - void ShowListOfReportCostumer()
+          - void ShowPersonalInformationCostumer():
         - MenuInvoice.class
+          - void ShowAddInvoice():
+          - void ShowRemoveInvoice():
+          - void ShowUpdateInvoice():
+          - void ShowListInvoice():
         - MenuMedicine.class
+          - void ShowAddMedicine():
+          - void ShowRemoveMedicine():
+          - void ShowUpdateMedicine():
+          - void ShowListMedicine():
         - MenuPharma.class
+          - void ShowAddPharmacist():
+          - void ShowRemovePharmacist():
+          - void ShowUpdatePharmacist():
+          - void ShowListPharmacist():
         - MenuSupplier.class
+          - void ShowListOfReportSupplier():
+          - void ShowPersonalInformationSupplier():
         - MenuUser.class
+        - void ShowAddUser():
+        - void ShowRemoveUser():
+        - void ShowUpdateUser():
+        - void ShowListUser():
       - main.class
+        - void main(String[] args):
+        - void ShowTitle():
     * resources: xml files of the application
       - invoices.xml
       - medicines.xml

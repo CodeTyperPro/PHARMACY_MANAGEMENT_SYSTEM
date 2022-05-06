@@ -1,8 +1,6 @@
 package service;
 
-import model.Costumer;
 import model.Invoice;
-import model.Medicine;
 import model.User;
 
 import java.util.ArrayList;

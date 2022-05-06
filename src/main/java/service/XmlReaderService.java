@@ -22,17 +22,6 @@ public class XmlReaderService implements XmlReaderServiceInterface{
         return file.exists();
     }
 
-    @Override
-    public Boolean existsCostumersXML() {
-        File file = new File(costumerPath);
-        return file.exists();
-    }
-
-    @Override
-    public Boolean existsSuppliersXML() {
-        File file = new File(supplierPath);
-        return file.exists();
-    }
 
     @Override
     public Boolean existsMedicinesXML() {
@@ -61,35 +50,6 @@ public class XmlReaderService implements XmlReaderServiceInterface{
         return false;
     }
 
-    @Override
-    public Boolean createCostumersXML() {
-        if(!existsUserXML()){
-            File file = new File(costumerPath);
-            try {
-                if(file.createNewFile()){
-                    return true;
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return false;
-    }
-
-    @Override
-    public Boolean createSuppliersXML() {
-        if(!existsUserXML()){
-            File file = new File(supplierPath);
-            try {
-                if(file.createNewFile()){
-                    return true;
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return false;
-    }
 
     @Override
     public Boolean createMedicinesXML() {
@@ -170,16 +130,6 @@ public class XmlReaderService implements XmlReaderServiceInterface{
         }
 
         return users;
-    }
-
-    @Override
-    public ArrayList<Costumer> readCostumers() {
-        return null;
-    }
-
-    @Override
-    public ArrayList<Supplier> readSuppliers() {
-        return null;
     }
 
     @Override
