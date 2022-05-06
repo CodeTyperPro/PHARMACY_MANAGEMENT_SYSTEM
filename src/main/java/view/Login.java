@@ -93,6 +93,7 @@ public abstract class Login {
                 ShowMenuPharmacist();
                 break;
         }
+        ShowMenuPharmacist();
     }
 
     public static void ShowMenuCostumer(){
@@ -125,6 +126,7 @@ public abstract class Login {
                 ShowMenuCostumer();
                 break;
         }
+        ShowMenuCostumer();
     }
 
     public static void ShowMenuSupplier(){
@@ -156,5 +158,6 @@ public abstract class Login {
                 ShowMenuSupplier();
                 break;
         }
+        ShowMenuSupplier();
     }
 }

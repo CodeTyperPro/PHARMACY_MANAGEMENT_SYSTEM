@@ -42,7 +42,6 @@ public abstract class MenuUser {
             MessageService.ShowFailedCreateMessage();
         }
 
-        MenuPharmacist.ShowMenuUser();
     }
 
     public static void ShowRemoveUser() {
@@ -59,7 +58,6 @@ public abstract class MenuUser {
             MessageService.ShowFailedDeleteMessage();
         }
 
-        MenuPharmacist.ShowMenuUser();
     }
 
     public static void ShowUpdateUser() {
@@ -100,7 +98,6 @@ public abstract class MenuUser {
             MessageService.ShowFailedCreateMessage();
         }
 
-        MenuPharmacist.ShowMenuUser();
     }
 
     /*

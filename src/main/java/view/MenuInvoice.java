@@ -46,7 +46,6 @@ public abstract class MenuInvoice {
             MessageService.ShowFailedCreateMessage();
         }
 
-        MenuPharmacist.ShowMenuInvoice();
     }
 
     public static void ShowRemoveInvoice() {
@@ -73,7 +72,6 @@ public abstract class MenuInvoice {
             MessageService.ShowFailedDeleteMessage();
         }
 
-        MenuPharmacist.ShowMenuInvoice();
     }
 
     public static void ShowUpdateInvoice() {

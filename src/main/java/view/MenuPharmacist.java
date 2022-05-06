@@ -1,8 +1,12 @@
 package view;
 
+import service.MessageService;
+import service.ValidateService;
+
 import java.util.Scanner;
 
 public abstract class MenuPharmacist {
+    private static ValidateService validateService;
     public static void ShowNewMedicineOrder(){
         MenuMedicine.ShowAddMedicine();
     }
@@ -19,16 +23,56 @@ public abstract class MenuPharmacist {
                 "Operation: ");
 
         Scanner sc = new Scanner(System.in);
+        String times = "";
+        int n;
         char option = sc.next().charAt(0);
         switch (option){
             case '1':
-                MenuMedicine.ShowAddMedicine();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuMedicine.ShowAddMedicine();
+                }
+
                 break;
             case '2':
-                MenuMedicine.ShowRemoveMedicine();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuMedicine.ShowRemoveMedicine();
+                }
+
                 break;
             case '3':
-                MenuMedicine.ShowUpdateMedicine();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuMedicine.ShowUpdateMedicine();
+                }
                 break;
             case '4':
                 MenuMedicine.ShowListMedicine();
@@ -44,45 +88,36 @@ public abstract class MenuPharmacist {
                 ShowMenuMedicine();
                 break;
         }
+
+        ShowMenuMedicine();
     }
 
 
     public static void ShowMenuSupplier() {
         System.out.println("\n\t\t::: MAIN SUPPLIER :::");
         System.out.print("\n\t\t" +
-                "[1] => Add Supplier:\n\t\t" +
-                "[2] => Remove Supplier:\n\t\t" +
-                "[3] => Update Supplier:\n\t\t" +
-                "[4] => List Supplier:\n\t\t" +
-                "[5] => Back <=::\n\t\t" +
-                "[6] => Exit.\n\t\t" +
+                "[1] => List Supplier:\n\t\t" +
+                "[2] => Back <=::\n\t\t" +
+                "[3] => Exit.\n\t\t" +
                 "Operation: ");
 
         Scanner sc = new Scanner(System.in);
         char option = sc.next().charAt(0);
         switch (option){
             case '1':
-                MenuSupplier.ShowAddSupplier();
+                MenuSupplier.ShowListOfReportSupplier();
                 break;
             case '2':
-                MenuSupplier.ShowRemoveSupplier();
-                break;
-            case '3':
-                MenuSupplier.ShowUpdateSupplier();
-                break;
-            case '4':
-                MenuSupplier.ShowListSupplier();
-                break;
-            case '5':
                 Login.ShowMenuPharmacist();
                 break;
-            case '6':
+            case '3':
                 System.exit(0);
                 break;
             default:
                 ShowMenuSupplier();
                 break;
         }
+        ShowMenuSupplier();
     }
 
     public static void ShowMenuPharmacist() {
@@ -122,6 +157,7 @@ public abstract class MenuPharmacist {
                 ShowMenuPharmacist();
                 break;
         }
+        ShowMenuPharmacist();
     }
 
     public static void ShowMenuInvoice() {
@@ -161,6 +197,7 @@ public abstract class MenuPharmacist {
                 ShowMenuPharmacist();
                 break;
         }
+        ShowMenuInvoice();
     }
 
     public static void ShowMenuUser() {
@@ -200,5 +237,6 @@ public abstract class MenuPharmacist {
                 ShowMenuUser();
                 break;
         }
+        ShowMenuUser();
     }
 }

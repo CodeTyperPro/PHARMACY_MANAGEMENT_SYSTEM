@@ -1,7 +1,6 @@
 # PHARMACY MANAGEMENT SYSTEM
 
-The pharmacy management system, also known as the pharmacy information system, is a system that stores data and enables functionality that organizes and maintains the medication use process within pharmacies.
-
+The PHARMACY MANAGEMENT SYSTEM is a system that organizes and manages the medicinal use process in pharmacies by storing data and enabling functionality.
 Developed using `JAVA` programming language, Pharmacy management system is an offline application that uses `XML` as the database.
 
 ### Existing System:

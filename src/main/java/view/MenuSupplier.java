@@ -12,18 +12,6 @@ public abstract class MenuSupplier {
     private static SupplierService supplierService;
     private static UserService userService;
 
-    public static void ShowAddSupplier() {
-    }
-
-    public static void ShowRemoveSupplier() {
-    }
-
-    public static void ShowUpdateSupplier() {
-    }
-
-    public static void ShowListSupplier() {
-    }
-
     /*
      * @Author: RAVIK, NOVEMBER 5, 2019
      * @url: https://itsallbinary.com/java-printing-to-console-in-table-format-simple-code-with-flexible-width-left-align-header-separator-line/

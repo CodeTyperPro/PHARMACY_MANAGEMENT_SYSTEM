@@ -31,7 +31,6 @@ public abstract class MenuPharma {
             MessageService.ShowFailedCreateMessage();
         }
 
-        MenuPharmacist.ShowMenuPharmacist();
     }
 
     public static void ShowRemovePharmacist() {
@@ -48,7 +47,6 @@ public abstract class MenuPharma {
             MessageService.ShowFailedDeleteMessage();
         }
 
-        MenuPharmacist.ShowMenuPharmacist();
     }
 
     public static void ShowUpdatePharmacist() {
@@ -77,7 +75,6 @@ public abstract class MenuPharma {
             MessageService.ShowFailedCreateMessage();
         }
 
-        MenuPharmacist.ShowMenuPharmacist();
     }
 
     /*
