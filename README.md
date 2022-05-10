@@ -276,7 +276,7 @@ What would you like to do?
 - [Menu Medicines](#menu-medicines)
 - [Menu Invoices](#menu-invoices)
 - [Supplier Report](#supplier-report)
-- [costumer Report](#costumer-report)
+- [Costumer Report](#costumer-report)
 
 ### Login
 
