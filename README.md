@@ -1,17 +1,12 @@
 # PHARMACY MANAGEMENT SYSTEM
 
-The PHARMACY MANAGEMENT SYSTEM is a system that organizes and manages the medicinal use process in pharmacies by storing data and enabling functionality.
-Developed using `JAVA` programming language, Pharmacy management system is an offline application that uses `XML` as the database.
+The PHARMACY MANAGEMENT SYSTEM is a console system that organizes and manages the medicinal use process in pharmacies by storing data, transcripting and enabling functionality.
+Developed using `JAVA` programming language, Pharmacy management system is an offline application that uses `XML` as the database. 
 
-### Existing System:
+### Purpose:
 
-The existing system is paper-based involving high amount of paper work and manpower requirement. Even though computerized systems are used in some places, they are not web-based and are very insecure and improperly managed. So, the current pharmacy management procedure is very uneconomical and inflexible to meet user demands.
-
-### Proposed System:
-
-The proposed system, being web-based, is very efficient and effective from the point of view of work productivity and time. It is less tedious to manage operations in a medical store or pharmacy with such a system. It has all the required modules and is developed with the aim of managing staffs, schedule, inventories, and relevant things in the medical store.
-
-With this system, the entire operations in medical store is fully automated. Unlike the traditional system where records were maintained manually, this system maintains records in a database. Typical example of these records include purchases, counter sales, recorder levels, staffs, suppliers, customers, monetary transactions, etc.
+Technology has improved immensely in recent days. Improving the quality of one’s life is an important benefit of technology in healthcare. Besides, it also reduces the burden of staff in the hospital and improves the health of the patient easily and efficiently.
+The purpose of this console-based system is to improve the eficiency regardign to the produtivy in Pharmacies of Medical stores. With this system, the entire operations in medical store is fully automated. Unlike the traditional system where records were maintained manually, this system maintains records in a database. Typical example of these records include purchases, counter sales, staffs, suppliers, customers, customers, etc.
 
 ### Users of the system:
 
@@ -88,150 +83,150 @@ What would you like to do?
 ---
 ## Project Structure
 * pom.xml
-* README.md
+* README.md : github documentation of the project.
 * src
   * main
     * java: source-code of the application
       * controller
         - LoginController.class
-          - public Integer successfulLogin(User user): 
+          - public Integer successfulLogin(User user): check if the logging was sucessiful.
       * model
         - Invoice.class
-          - Invoice():
-          - Invoice(Integer id, String costumerName, String medicineName, Integer quantity, Double discount, Double totalPrice, String date):
-          - Integer getId():
-          - void setId(Integer id):
-          - String getCostumerName():
-          - void setCostumerName(String costumerName):
-          - String getMedicineName():
-          - void setMedicineName(String medicineName):
-          - Integer getQuantity():
-          - void setQuantity(Integer quantity):
-          - Double getTotalPrice():
-          - void setTotalPrice(Double totalPrice):
-          - String getDate():
-          - void setDate():
+          - Invoice(): empty constructor the invoice class.
+          - Invoice(Integer id, String costumerName, String medicineName, Integer quantity, Double discount, Double totalPrice, String date): invoice constructor to fill information required by the class.
+          - Integer getId(): allow the program to get invoice id outside of the class.
+          - void setId(Integer id): allow the program to set invoice id outside of the class.
+          - String getCostumerName(): return user's name related to the invoice.
+          - void setCostumerName(String costumerName): set user's name related to the invoice.
+          - String getMedicineName(): return medicine's name related to the invoice.
+          - void setMedicineName(String medicineName): set medicine's name related to the invoice.
+          - Integer getQuantity(): return the quantity of medicines to sell.
+          - void setQuantity(Integer quantity): set the quantity of medicines to sell.
+          - Double getTotalPrice(): calculate and return the total price of the invoice.
+          - void setTotalPrice(Double totalPrice): set the total price of the invoice.
+          - String getDate(): return the date of the sell.
+          - void setDate(): set the date of the sell.
         - Medicine.class
-          - Medicine()
-          - String getName():
+          - Medicine(): empty constructor the medicine class.
+          - String getName(): allow the program to get the name outside of the class.
           - void setName(String name):
-          - String getSupplier():
-          - void setSupplier(String supplier):
-          - Double getPrice():
-          - void setPrice(Double price):
-          - Integer getQuantity():
-          - void setQuantity(Integer quantity):
-          - Medicine(String name, String supplier, Double price, Integer quantity):
+          - String getSupplier(): allow the program to get the supplier outside of the class.
+          - void setSupplier(String supplier): allow the program to set the supplier outside of the class.
+          - Double getPrice(): allow the program to get the price outside of the class.
+          - void setPrice(Double price): allow the program to set the price outside of the class.
+          - Integer getQuantity(): allow the program to return the quantity of the medicines outside of the class.
+          - void setQuantity(Integer quantity): allow the program to set the quantity of the medicines outside of the class.
+          - Medicine(String name, String supplier, Double price, Integer quantity): constuctor of the medicine class.
         - User.class
-          - String getName():
+          - String getName(): allow the program to get the name outside of the class.
           - void setName(String name):
-          - String getUsername():
+          - String getUsername():  allow the program to get the username outside of the class.
           - void setUsername(String username):
-          - String getPassword():
-          - void setPassword(String password):
-          - Integer getLevel():
-          - setLevel(Integer level):
-          - public String toString():
+          - String getPassword(): allow the program to get the password outside of the class.
+          - void setPassword(String password): allow the program to set the password outside of the class.
+          - Integer getLevel(): allow the program to get the level of the user outside of the class.
+          - setLevel(Integer level): allow the program to set the level outside of the class.
+          - public String toString(): return user informations.
       * service
         - CostumerService.class
-          - User personalInformation(String username):
-          - ArrayList<Invoice> listInvoiceReport(User user):
-          - Boolean existsCostumer(String username):
+          - User personalInformation(String username): return the information of the user with that passed username if it exists.
+          - ArrayList<Invoice> listInvoiceReport(User user): list the invoices related to the user.
+          - Boolean existsCostumer(String username): check if the costumer with that username exists actually.
         - CostumerServiceInterface.class
         - InvoiceService.class 
-          - Boolean addInvoice(Invoice invoice):
-          - Boolean deleteInvoice(Integer id):
-          - ArrayList<Invoice> listInvoice():
-          - Boolean updateInvoice(Integer id, Invoice invoice):
-          - Boolean existsInvoice(Integer id):
-          - Double getTotalPrice(String medicine, Integer quantity):
-          - String medicineInvoice(Integer id):
-          - ArrayList<Invoice> listInvoiceCostumer(String name):
-          - Integer getLastIdInvoice():
+          - Boolean addInvoice(Invoice invoice): append new medicine in the xml file.
+          - Boolean deleteInvoice(Integer id): delete medicine in the xml file.
+          - ArrayList<Invoice> listInvoice(): list the invoices stored in the xml file.
+          - Boolean updateInvoice(Integer id, Invoice invoice): update medicine in the xml file.
+          - Boolean existsInvoice(Integer id): check if the id already exist in the database (xml).
+          - Double getTotalPrice(String medicine, Integer quantity): caculate the total price.
+          - String medicineInvoice(Integer id): return the name of the medicine with that id.
+          - ArrayList<Invoice> listInvoiceCostumer(String name): list all the invoices related to the costumer.
+          - Integer getLastIdInvoice(): find the last id number to set the next to the new item. Like, if the last stored is 10, the new will be 11.
         - InvoiceServiceInterface.class
         - MedicineService.class
-          - Boolean addMedicine(Medicine medicine):
-          - Boolean deleteMedicine(String name):
-          - Boolean updateMedicine(String name, Medicine medicine):
-          - ArrayList<Medicine> listMedicines():
-          - Boolean existsMedicine(String name):
-          - Double priceMedicine(String name):
-          - ArrayList<Medicine> listMedicinesSupplier(String name):
+          - Boolean addMedicine(Medicine medicine):  append new medicine in the xml file.
+          - Boolean deleteMedicine(String name): delete medicine in the xml file.
+          - Boolean updateMedicine(String name, Medicine medicine): update medicine in the xml file.
+          - ArrayList<Medicine> listMedicines(): list the medicines stored in the xml file.
+          - Boolean existsMedicine(String name): check if the name already exist in the database (xml).
+          - Double priceMedicine(String name): calculate the price of the medicine.
+          - ArrayList<Medicine> listMedicinesSupplier(String name): list all the medicines provided by the supplier <name>.
         - MedicineServiceInterface.class
         - SupplierService.class 
           - ArrayList<Medicine> listMedicineReport(User user):
         - SupplierServiceInterface.class
         - UserService.class
-          - Boolean addUser(User user);
-          - Boolean deleteUser(String username);
-          - Boolean updateUser(String username, User user);
-          - ArrayList<User> listUsers():
-          - Boolean existsUser(String username:
-          - String generatePassword(int len):
-          - ArrayList<User> getUserInformation(User user):
-          - User getUserInformation(String username):
+          - Boolean addUser(User user): append new user in the xml file.
+          - Boolean deleteUser(String username): delete user in the xml file.
+          - Boolean updateUser(String username, User user): update user in the xml file.
+          - ArrayList<User> listUsers(): list the users stored in the xml file.
+          - Boolean existsUser(String username): check if the username already exist in the database (xml).
+          - String generatePassword(int len): generate a random password with length "len".
+          - ArrayList<User> getUserInformation(User user): search a specific user and return a vector with this single user to then print the beautiful table.
+          - User getUserInformation(String username): return the user information in order to visualize his own information.
         - UserServiceInterface.class
         - ValidateService.class
-          - Boolean checkIntegerNumber(String number):
-          - Boolean checkDoubleNumber(String number):
+          - Boolean checkIntegerNumber(String number): check if the given string is an integer number actually.
+          - Boolean checkDoubleNumber(String number): check if the given string is an double number actually.
         - ValidateServiceInterface.class
         - XmlReaderService.class
-          - Boolean existsUserXML():
-          - Boolean existsMedicinesXML():
-          - Boolean existsInvoicesXML():
-          - Boolean createUserXML():
-          - Boolean createMedicinesXML():
-          - Boolean createInvoicesXML():
-          - ArrayList<User> readUsers():
-          - ArrayList<Medicine> readMedicines():
-          - ArrayList<Invoice> readInvoices():
+          - Boolean existsUserXML(): check if user xml file exists.
+          - Boolean existsMedicinesXML(): check if medicine xml file exists.
+          - Boolean existsInvoicesXML(): check if invoice xml file exists.
+          - Boolean createUserXML(): create user xml file.
+          - Boolean createMedicinesXML(): create medicine xml file.
+          - Boolean createInvoicesXML(): create invoice xml file.
+          - ArrayList<User> readUsers(): read users-data from the file and return as an array.
+          - ArrayList<Medicine> readMedicines(): read medicines-data from the file and return as an array.
+          - ArrayList<Invoice> readInvoices(): read invoices-data from the file and return as an array.
         - XmlReaderServiceInterface.class
         - XmlWriterService.class
-          - Boolean addUserXML(User user):
-          - Boolean deleteUserXML(String username):
-          - Boolean updateUserXML(String username, User user):
-          - Boolean addMedicineXML(Medicine medicine):
-          - Boolean deleteMedicineXML(String username):
-          - Boolean updateMedicineXML(String username, Medicine medicine):
-          - Boolean addInvoiceXML(Invoice medicine):
-          - Boolean deleteInvoiceXML(Integer id):
-          - Boolean updateInvoiceXML(Integer id, Invoice invoice):
+          - Boolean addUserXML(User user): add user data to the xml file.
+          - Boolean deleteUserXML(String username): delete user data from the xml file.
+          - Boolean updateUserXML(String username, User user): update stored data of user data in the xml file.
+          - Boolean addMedicineXML(Medicine medicine): add medicine data to the xml file.
+          - Boolean deleteMedicineXML(String username): delete medicine data from the xml file.
+          - Boolean updateMedicineXML(String username, Medicine medicine): update stored medicine of invoice data in the xml file.
+          - Boolean addInvoiceXML(Invoice medicine): add invoice data to the xml file.
+          - Boolean deleteInvoiceXML(Integer id): delete invoice data from the xml file.
+          - Boolean updateInvoiceXML(Integer id, Invoice invoice): update stored data of invoice data in the xml file.
         - XmlWriterServiceInterface.class
       * view
         - Login.class
-          - void ShowLogin():
-          - void ShowMenuPharmacist():
-          - void ShowMenuCostumer():
-          - void ShowMenuSupplier():
+          - void ShowLogin(): allows all the uses access to the system in case of having correct credentials.
+          - void ShowMenuPharmacist(): show the main menu of the pharmacist.
+          - void ShowMenuCostumer(): show the main menu of the costumer.
+          - void ShowMenuSupplier(): show the main menu of the supplier.
         - MenuCostumer.class
           - void ShowListOfReportCostumer()
           - void ShowPersonalInformationCostumer():
         - MenuInvoice.class
-          - void ShowAddInvoice():
-          - void ShowRemoveInvoice():
-          - void ShowUpdateInvoice():
-          - void ShowListInvoice():
+          - void ShowAddInvoice(): ask information from the user to add in the xml file.
+          - void ShowRemoveInvoice(): ask user identification to find and delete in the xml file if it exists.
+          - void ShowUpdateInvoice(): ask information from the user to update in the xml file.
+          - void ShowListInvoice(): list the invoices from a vector of medicines.
         - MenuMedicine.class
-          - void ShowAddMedicine():
-          - void ShowRemoveMedicine():
-          - void ShowUpdateMedicine():
-          - void ShowListMedicine():
+          - void ShowAddMedicine(): ask information from the user to add in the xml file.
+          - void ShowRemoveMedicine(): ask medicine identification to find and delete in the xml file if it exists.
+          - void ShowUpdateMedicine(): ask information from the medicine to update in the xml file.
+          - void ShowListMedicine(): list the medicines from a vector of medicines.
         - MenuPharma.class
-          - void ShowAddPharmacist():
-          - void ShowRemovePharmacist():
-          - void ShowUpdatePharmacist():
-          - void ShowListPharmacist():
+          - void ShowAddPharmacist(): ask information from the user to add in the xml file.
+          - void ShowRemovePharmacist(): ask user identification to find and delete in the xml file if it exists.
+          - void ShowUpdatePharmacist(): ask information from the user to update in the xml file.
+          - void ShowListPharmacist(): list the pharmacists from a vector of Users.
         - MenuSupplier.class
           - void ShowListOfReportSupplier():
           - void ShowPersonalInformationSupplier():
         - MenuUser.class
-        - void ShowAddUser():
-        - void ShowRemoveUser():
-        - void ShowUpdateUser():
-        - void ShowListUser():
+        - void ShowAddUser(): ask information from the user to add in the xml file.
+        - void ShowRemoveUser(): ask user identification to find and delete in the xml file if it exists.
+        - void ShowUpdateUser(): ask information from the user to update in the xml file.
+        - void ShowListUser(): list the users from a vector of Users.
       - main.class
-        - void main(String[] args):
-        - void ShowTitle():
+        - void main(String[] args): the first method to run when the program is executed.
+        - void ShowTitle(): show the title in the top of the console.
     * resources: xml files of the application
       - invoices.xml
       - medicines.xml
