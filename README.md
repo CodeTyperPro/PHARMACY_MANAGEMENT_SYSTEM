@@ -6,15 +6,14 @@ Developed using `JAVA` programming language, Pharmacy management system is an of
 ### Purpose:
 
 Technology has improved immensely in recent days. Improving the quality of one’s life is an important benefit of technology in healthcare. Besides, it also reduces the burden of staff in the hospital and improves the health of the patient easily and efficiently.
-The purpose of this console-based system is to improve the eficiency regardign to the produtivy in Pharmacies of Medical stores. With this system, the entire operations in medical store is fully automated. Unlike the traditional system where records were maintained manually, this system maintains records in a database. Typical example of these records include purchases, counter sales, staffs, suppliers, customers, customers, etc.
+The purpose of this console-based system is to improve the eficiency regardign to the produtivy in Pharmacies of Medical stores. With this system, the entire operations in medical store is fully automated. Unlike the traditional system where records were maintained manually, this system maintains records in a database. Typical example of these records include purchases, counter sales, staffs, suppliers, customers, etc.
 
 ### Users of the system:
 
 Listed below are the main users of the system. They are required to register into the system to access records and details stored in the database. Only the Pharmacist has the privilege or access over all records and users. The system access to other users in restricted as per their functions in the medical store.
-
-User Pharmacist
-User Costumer
-User Supplier
+1. User Pharmacist
+2. User Costumer
+3. User Supplier
 
 ### Table Content
 1. [Workplace](#workplace)

@@ -12,6 +12,7 @@ public abstract class MenuPharmacist {
     }
 
     public static void ShowMenuMedicine() {
+        validateService = new ValidateService();
         System.out.println("\n\t\t::: MAIN MEDICINE :::");
         System.out.print("\n\t\t" +
                 "[1] => Add Medicine:\n\t\t" +
@@ -35,7 +36,7 @@ public abstract class MenuPharmacist {
                     if(!validateService.checkIntegerNumber(times)){
                         MessageService.ShowInvalidNumber();
                     }
-                } while(validateService.checkIntegerNumber(times));
+                } while(!validateService.checkIntegerNumber(times));
 
                 n = Integer.parseInt(times);
                 for (int i = 0; i<n; i++){
@@ -51,7 +52,7 @@ public abstract class MenuPharmacist {
                     if(!validateService.checkIntegerNumber(times)){
                         MessageService.ShowInvalidNumber();
                     }
-                } while(validateService.checkIntegerNumber(times));
+                } while(!validateService.checkIntegerNumber(times));
 
                 n = Integer.parseInt(times);
                 for (int i = 0; i<n; i++){
@@ -67,7 +68,7 @@ public abstract class MenuPharmacist {
                     if(!validateService.checkIntegerNumber(times)){
                         MessageService.ShowInvalidNumber();
                     }
-                } while(validateService.checkIntegerNumber(times));
+                } while(!validateService.checkIntegerNumber(times));
 
                 n = Integer.parseInt(times);
                 for (int i = 0; i<n; i++){
@@ -94,6 +95,7 @@ public abstract class MenuPharmacist {
 
 
     public static void ShowMenuSupplier() {
+        validateService = new ValidateService();
         System.out.println("\n\t\t::: MAIN SUPPLIER :::");
         System.out.print("\n\t\t" +
                 "[1] => List Supplier:\n\t\t" +
@@ -121,6 +123,7 @@ public abstract class MenuPharmacist {
     }
 
     public static void ShowMenuPharmacist() {
+        validateService = new ValidateService();
         System.out.println("\n\t\t::: MENU PHARMACIST :::");
         System.out.print("\n\t\t" +
                 "[1] => Add Pharmacist:\n\t\t" +
@@ -132,20 +135,57 @@ public abstract class MenuPharmacist {
                 "Operation: ");
 
         Scanner sc = new Scanner(System.in);
+        String times = "";
+        int n;
         char option = sc.next().charAt(0);
         switch (option){
             case '1':
-                MenuPharma.ShowAddPharmacist();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(!validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuPharma.ShowAddPharmacist();
+                }
                 break;
             case '2':
-                MenuPharma.ShowRemovePharmacist();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(!validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuPharma.ShowRemovePharmacist();
+                }
                 break;
             case '3':
-                MenuPharma.ShowUpdatePharmacist();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(!validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuPharma.ShowUpdatePharmacist();
+                }
                 break;
             case '4':
                 MenuPharma.ShowListPharmacist();
-                ShowMenuPharmacist();
                 break;
             case '5':
                 Login.ShowMenuPharmacist();
@@ -154,13 +194,14 @@ public abstract class MenuPharmacist {
                 System.exit(0);
                 break;
             default:
-                ShowMenuPharmacist();
+
                 break;
         }
         ShowMenuPharmacist();
     }
 
     public static void ShowMenuInvoice() {
+        validateService = new ValidateService();
         System.out.println("\n\t\t::: INVOICE MENU :::");
         System.out.print("\n\t\t" +
                 "[1] => Add Invoice:\n\t\t" +
@@ -172,20 +213,57 @@ public abstract class MenuPharmacist {
                 "Operation: ");
 
         Scanner sc = new Scanner(System.in);
+        String times = "";
+        int n;
         char option = sc.next().charAt(0);
         switch (option){
             case '1':
-                MenuInvoice.ShowAddInvoice();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(!validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuInvoice.ShowAddInvoice();
+                }
                 break;
             case '2':
-                MenuInvoice.ShowRemoveInvoice();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(!validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuInvoice.ShowRemoveInvoice();
+                }
                 break;
             case '3':
-                MenuInvoice.ShowUpdateInvoice();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(!validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuInvoice.ShowUpdateInvoice();
+                }
                 break;
             case '4':
                 MenuInvoice.ShowListInvoice();
-                ShowMenuInvoice();
                 break;
             case '5':
                 Login.ShowMenuPharmacist();
@@ -194,13 +272,14 @@ public abstract class MenuPharmacist {
                 System.exit(0);
                 break;
             default:
-                ShowMenuPharmacist();
+
                 break;
         }
         ShowMenuInvoice();
     }
 
     public static void ShowMenuUser() {
+        validateService = new ValidateService();
         System.out.println("\n\t\t::: USER MENU :::");
         System.out.print("\n\t\t" +
                 "[1] => Add User:\n\t\t" +
@@ -212,16 +291,54 @@ public abstract class MenuPharmacist {
                 "Operation: ");
 
         Scanner sc = new Scanner(System.in);
+        String times = "";
+        int n;
         char option = sc.next().charAt(0);
         switch (option){
             case '1':
-                MenuUser.ShowAddUser();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(!validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuUser.ShowAddUser();
+                }
                 break;
             case '2':
-                MenuUser.ShowRemoveUser();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(!validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuUser.ShowRemoveUser();
+                }
                 break;
             case '3':
-                MenuUser.ShowUpdateUser();
+                times = "";
+                do{
+                    System.out.print("\n\t\tHow many times to you want to execute this operation? R: ");
+                    times = sc.next();
+                    if(!validateService.checkIntegerNumber(times)){
+                        MessageService.ShowInvalidNumber();
+                    }
+                } while(!validateService.checkIntegerNumber(times));
+
+                n = Integer.parseInt(times);
+                for (int i = 0; i<n; i++){
+                    MenuUser.ShowUpdateUser();
+                }
                 break;
             case '4':
                 MenuUser.ShowListUser();
@@ -234,7 +351,7 @@ public abstract class MenuPharmacist {
                 System.exit(0);
                 break;
             default:
-                ShowMenuUser();
+
                 break;
         }
         ShowMenuUser();

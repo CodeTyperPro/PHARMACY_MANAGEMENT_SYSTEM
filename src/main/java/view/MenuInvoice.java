@@ -15,6 +15,7 @@ public abstract class MenuInvoice {
     private static ValidateService validateService;
 
     public static void ShowAddInvoice() {
+        validateService = new ValidateService();
         service = new InvoiceService();
 
         System.out.print("\n\t\t::: ADD INVOICE :::\n");
@@ -33,7 +34,7 @@ public abstract class MenuInvoice {
             if(!validateService.checkIntegerNumber(number)){
                 MessageService.ShowInvalidNumber();
             }
-        } while(validateService.checkIntegerNumber(number));
+        } while(!validateService.checkIntegerNumber(number));
 
         invoice.setQuantity(Integer.parseInt(number));
 
@@ -50,6 +51,7 @@ public abstract class MenuInvoice {
 
     public static void ShowRemoveInvoice() {
         service = new InvoiceService();
+        validateService = new ValidateService();
 
         System.out.print("\n\t\t::: REMOVE INVOICE :::\n");
         Scanner sc = new Scanner(System.in);
@@ -62,7 +64,7 @@ public abstract class MenuInvoice {
             if(!validateService.checkIntegerNumber(number)){
                 MessageService.ShowInvalidNumber();
             }
-        } while(validateService.checkIntegerNumber(number));
+        } while(!validateService.checkIntegerNumber(number));
 
         Integer id = Integer.parseInt(number);
 
@@ -76,6 +78,7 @@ public abstract class MenuInvoice {
 
     public static void ShowUpdateInvoice() {
         service = new InvoiceService();
+        validateService = new ValidateService();
 
         System.out.print("\n\t\t::: UPDATE INVOICE :::\n");
         Scanner sc = new Scanner(System.in);
@@ -90,7 +93,7 @@ public abstract class MenuInvoice {
             if(!validateService.checkIntegerNumber(number)){
                 MessageService.ShowInvalidNumber();
             }
-        } while(validateService.checkIntegerNumber(number));
+        } while(!validateService.checkIntegerNumber(number));
 
         Integer id = Integer.parseInt(number);
 
@@ -101,7 +104,7 @@ public abstract class MenuInvoice {
             if(!validateService.checkIntegerNumber(number)){
                 MessageService.ShowInvalidNumber();
             }
-        } while(validateService.checkIntegerNumber(number));
+        } while(!validateService.checkIntegerNumber(number));
 
         Integer quant = Integer.parseInt(number);
         invoice.setQuantity(quant);
@@ -121,6 +124,7 @@ public abstract class MenuInvoice {
      * */
     public static void ShowListInvoice() {
         service = new InvoiceService();
+        validateService = new ValidateService();
         ArrayList<Invoice> invoices = service.listInvoice();
 
         System.out.println("\n\t\t::: LIST INVOICES :::\n");

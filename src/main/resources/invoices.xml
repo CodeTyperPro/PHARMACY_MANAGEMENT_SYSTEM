@@ -13,15 +13,7 @@
     <costumerName>John</costumerName>
     <medicineName>Atorvastatin</medicineName>
     <quantity>4</quantity>
-    <totalPrice>1000.0</totalPrice>
-    <date>2022-05-06</date>
-  </invoice>
-  <invoice>
-    <id>3</id>
-    <costumerName>Hayat Chouhib</costumerName>
-    <medicineName>Atorvastatin</medicineName>
-    <quantity>6</quantity>
-    <totalPrice>2500.0</totalPrice>
+    <totalPrice>1834.0</totalPrice>
     <date>2022-05-06</date>
   </invoice>
 </invoices>

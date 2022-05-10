@@ -15,6 +15,7 @@ public abstract class MenuMedicine {
     private static MedicineService service;
     private static ValidateService validateService;
     public static void ShowAddMedicine() {
+        validateService = new ValidateService();
 
         service = new MedicineService();
 
@@ -35,7 +36,7 @@ public abstract class MenuMedicine {
             if(!validateService.checkDoubleNumber(number)){
                 MessageService.ShowInvalidNumber();
             }
-        } while(validateService.checkDoubleNumber(number));
+        } while(!validateService.checkDoubleNumber(number));
 
         medicine.setPrice(Double.parseDouble(number));
 
@@ -47,7 +48,7 @@ public abstract class MenuMedicine {
             if(!validateService.checkIntegerNumber(number)){
                 MessageService.ShowInvalidNumber();
             }
-        } while(validateService.checkIntegerNumber(number));
+        } while(!validateService.checkIntegerNumber(number));
 
         medicine.setQuantity(Integer.parseInt(number));
 
@@ -61,6 +62,7 @@ public abstract class MenuMedicine {
 
     public static void ShowRemoveMedicine() {
         service = new MedicineService();
+        validateService = new ValidateService();
 
         System.out.print("\n\t\t::: REMOVE MEDICINE :::\n");
         Scanner sc = new Scanner(System.in);
@@ -77,6 +79,7 @@ public abstract class MenuMedicine {
 
     public static void ShowUpdateMedicine() {
         service = new MedicineService();
+        validateService = new ValidateService();
 
         System.out.print("\n\t\t::: UPDATE MEDICINE :::\n");
         Scanner sc = new Scanner(System.in);
@@ -99,7 +102,7 @@ public abstract class MenuMedicine {
             if(!validateService.checkDoubleNumber(number)){
                 MessageService.ShowInvalidNumber();
             }
-        } while(validateService.checkDoubleNumber(number));
+        } while(!validateService.checkDoubleNumber(number));
 
         medicine.setPrice(Double.parseDouble(number));
 
@@ -110,7 +113,7 @@ public abstract class MenuMedicine {
             if(!validateService.checkIntegerNumber(number)){
                 MessageService.ShowInvalidNumber();
             }
-        } while(validateService.checkIntegerNumber(number));
+        } while(!validateService.checkIntegerNumber(number));
 
         medicine.setQuantity(Integer.parseInt(number));
 
